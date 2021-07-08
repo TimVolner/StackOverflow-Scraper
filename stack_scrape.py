@@ -125,9 +125,9 @@ def main():
                 raw_html = simple_get(html)
                 
                 if raw_html != None:
-                    
+                    print("Retrieved HTML")
                     soup = BeautifulSoup(raw_html, "lxml")
-                    
+                    print("Converted to Soup")
                     write_code_file(soup, libs, inp_all)
                     html_list = parse_html(soup, html_list)
                     html_list.remove(html) 
